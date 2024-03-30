@@ -2,7 +2,19 @@
 
 void Title::update()
 {
+	m_startTransition.update(m_startButton.mouseOver());
+	m_exitTransition.update(m_exitButton.mouseOver());
 
+
+	if (m_startButton.mouseOver() || m_exitButton.mouseOver())
+	{
+		Cursor::RequestStyle(CursorStyle::Hand);
+	}
+
+	if (m_startButton.leftClicked())
+	{
+		changeScene(State::Game);
+	}
 }
 
 void Title::draw() const
