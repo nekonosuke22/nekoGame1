@@ -1,5 +1,16 @@
 ﻿#include "Game.h"
 
+Game::Game(const InitData& init)
+		:IScene{ init }
+{
+	Print << U"Game::Game()";
+}
+
+Game::~Game()
+{
+	Print << U"Game::~Game()";
+}
+
 void Game::update()
 {
 

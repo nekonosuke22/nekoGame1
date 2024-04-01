@@ -11,16 +11,8 @@ private:
 	Transition m_exitTransition{ 0.4s, 0.2s };
 
 public:
-	Title(const InitData& init)
-		: IScene{init}
-	{
-		Print << U"Title::Title()";
-	}
-
-	~Title()
-	{
-		Print << U"Title::~Title()";
-	}
+	Title(const InitData& init);
+	~Title();
 
 	void update() override;
 	void draw() const override;
