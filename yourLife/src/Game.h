@@ -1,8 +1,11 @@
 ﻿#pragma once
 #include "Manager.h"
+#include "Player/Player.h"
+
 class Game : public App::Scene
 {
 private:
+	Player player;
 public:
 	Game(const InitData& init);
 
