@@ -12,9 +12,17 @@ void Player::move()
 	{
 		pos.x -= speed;
 	}
-	if (KeyRight.pressed())
+	if (KeyRight.pressed() && pos.x < Scene::Width())
 	{
 		pos.x += speed;
+	}
+	if (KeyUp.pressed() && pos.y > 0)
+	{
+		pos.y -= speed;
+	}
+	if (KeyDown.pressed() && pos.y < Scene::Height())
+	{
+		pos.y += speed;
 	}
 }
 
